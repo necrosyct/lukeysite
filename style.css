@@ -234,8 +234,8 @@ body {
 }
 
 .discord-btn-section h4 {
-    /* MUDANÇA AQUI: Usa a cor vermelha principal */
-    color: var(--main-accent) !important; 
+    /* CORRIGIDO para var(--text-color) para que o texto volte a ser branco */
+    color: var(--text-color) !important; 
     margin-bottom: 15px;
     font-size: 1em;
     font-weight: 500;
@@ -281,4 +281,5 @@ body {
         width: 100%;
     }
 }
+
 
