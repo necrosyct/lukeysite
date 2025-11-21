@@ -13,6 +13,9 @@
     --main-accent: #f44336; /* AGORA VERMELHO: Cor principal do Destaque */
     --border-radius: 8px;
     --shadow-color: rgba(0, 0, 0, 0.5);
+    
+    /* COR ESPECÍFICA DO DISCORD */
+    --discord-blue: #7289DA;
 }
 
 /* Base */
@@ -221,6 +224,48 @@ body {
     font-size: 0.9em;
 }
 
+/* 🚀 ESTILOS PARA A SEÇÃO DO DISCORD 🚀 */
+.discord-btn-section {
+    text-align: center;
+    margin-top: 20px; /* Espaço entre o botão de download e a nova seção */
+    margin-bottom: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed #333; /* Uma linha divisória sutil */
+}
+
+.discord-btn-section h4 {
+    /* O subtítulo "Está procurando a Key? Entre No Nosso Discord!" */
+    color: var(--text-secondary); /* Cor do texto secundário para manter o tema dark */
+    margin-bottom: 15px;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.discord-btn {
+    display: inline-block;
+    width: 90%; /* Ajuste para ter margem nas laterais dentro do card */
+    max-width: 350px; /* Limite de largura para não ficar muito largo */
+    padding: 12px 25px;
+    background-color: var(--discord-blue); /* Usando a variável Discord Blue */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1em;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(114, 137, 218, 0.4); /* Sombra azul leve */
+}
+
+.discord-btn:hover {
+    background-color: #5b6fb8;
+    box-shadow: 0 6px 15px rgba(114, 137, 218, 0.6);
+}
+
+.discord-btn i {
+    margin-right: 8px;
+}
+/* FIM DOS ESTILOS DISCORD */
+
 /* Responsividade */
 @media (max-width: 600px) {
     .navbar {
@@ -230,5 +275,9 @@ body {
     }
     .main-lukey-card {
         width: 100%; 
+    }
+    /* Garante que o botão do Discord se ajuste em telas pequenas */
+    .discord-btn {
+        width: 100%;
     }
 }
