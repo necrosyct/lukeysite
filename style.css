@@ -55,7 +55,7 @@ body {
     transition: background-color 0.3s;
 }
 .steamtools-btn:hover {
-    background-color: #388e3c;
+    background-color: #b46666;
 }
 
 /* Container Principal e Layout de Card Único */
@@ -234,8 +234,8 @@ body {
 }
 
 .discord-btn-section h4 {
-    /* CORRIGIDO para var(--text-color) para deixar o texto branco */
-    color: var(--text-color); 
+    /* MUDANÇA AQUI: Usa a cor vermelha principal */
+    color: var(--main-accent) !important; 
     margin-bottom: 15px;
     font-size: 1em;
     font-weight: 500;
@@ -281,3 +281,4 @@ body {
         width: 100%;
     }
 }
+
