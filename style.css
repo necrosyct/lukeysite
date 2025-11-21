@@ -234,8 +234,8 @@ body {
 }
 
 .discord-btn-section h4 {
-    /* O subtítulo "Está procurando a Key? Entre No Nosso Discord!" */
-    color: var(--text-secondary); /* Cor do texto secundário para manter o tema dark */
+    /* CORRIGIDO para var(--text-color) para deixar o texto branco */
+    color: var(--text-color); 
     margin-bottom: 15px;
     font-size: 1em;
     font-weight: 500;
