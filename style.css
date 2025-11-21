@@ -1,0 +1,234 @@
+/* Importação de fonte */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    /* Cores Globais */
+    --dark-bg: #121212;
+    --card-bg: #1f1f1f;
+    --text-color: #ffffff;
+    --text-secondary: #ccc;
+    
+    /* CORES DE DESTAQUE ATUALIZADAS */
+    --green-accent: #4CAF50; /* Mantido para o botão SteamTools e Status Online */
+    --main-accent: #f44336; /* AGORA VERMELHO: Cor principal do Destaque */
+    --border-radius: 8px;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Base */
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Barra de Navegação (Navbar) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #333;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--main-accent); /* LuKey agora vermelho */
+}
+
+.steamtools-btn {
+    background-color: var(--green-accent);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+.steamtools-btn:hover {
+    background-color: #388e3c;
+}
+
+/* Container Principal e Layout de Card Único */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #aaa;
+    margin-bottom: 40px;
+}
+
+.cards-grid {
+    display: flex;
+    justify-content: center;
+}
+
+.main-lukey-card {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+/* Card em Destaque (Estilo VERMELHO) */
+.highlighted {
+    border: 2px solid var(--main-accent);
+    box-shadow: 0 0 20px rgba(244, 67, 54, 0.5); /* Sombra vermelha */
+}
+
+/* Tags e Títulos */
+.tag {
+    display: inline-block;
+    background-color: #333;
+    color: var(--text-secondary);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    margin-bottom: 15px;
+}
+
+.purple-tag {
+    background-color: var(--main-accent); /* Tag agora é vermelha */
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.card h3 {
+    margin-top: 5px;
+    font-size: 1.5em;
+    color: var(--text-color);
+}
+
+.card p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+/* Botão de Download */
+.download-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    transition: opacity 0.3s;
+}
+
+.download-btn:hover {
+    opacity: 0.9;
+}
+
+.purple-btn { 
+    background-color: var(--main-accent); /* Botão agora é vermelho */
+    color: var(--text-color); 
+}
+
+/* Seção de Recursos */
+.resources {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed #333;
+}
+
+.resources h4 {
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.resources ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.resources li {
+    padding-left: 1.3em;
+    text-indent: -1.3em;
+    margin-bottom: 5px;
+    color: var(--text-secondary);
+}
+
+.resources li::before {
+    content: "• ";
+    color: var(--main-accent); /* Bullets agora são vermelhos */
+    font-weight: bold;
+    display: inline-block;
+    width: 1.3em;
+}
+
+/* Estilo do Indicador de Status */
+.form-container {
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-indicator {
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.status-indicator.online {
+    background-color: var(--green-accent); /* Mantido verde para "Online" */
+    color: var(--text-color);
+}
+
+.status-indicator.offline {
+    background-color: var(--main-accent); /* Usado o vermelho principal para "Offline" */
+    color: var(--text-color);s
+}
+
+/* Rodapé */
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid #333;
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .navbar {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .main-lukey-card {
+        width: 100%; 
+    }
+}
