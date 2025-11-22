@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = "https://github.com/necrosyct/lukeydownload/raw/refs/heads/main/LuKey.exe";
             
             // Remove o alerta de simulação
-            // alert("Download de LuKey (v3.0) iniciado. (Simulação)");
+             alert("Download de LuKey (v1.0) iniciado.");
         });
     }
 
@@ -46,3 +46,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
